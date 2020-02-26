@@ -1,0 +1,63 @@
+Programming Project
+
+THEME
+A game where the user tries to guess a number 2D location in an imaginary 100*100 grid based on feedback from the the computer in terms of 
+information like “you’re getting closer” or “you’re getting further away”.
+
+METHOD
+Use 'randi' build-in funtion, define the 2D array that player will guess.
+By using this build-in function, the target 2D array will always change eveytime when the player plays the game.
+
+While statement is used to repeat the gaining information, and if statement is used to compare the column and row.
+Compare the array that user entered to the pre-entered one and when the number get it close, display "you're getting closer"
+and if not display"you're getting further away".
+
+This project will use loop and conditional execution which satisfies the requirement of the assignment.
+
+EXAMPLE
+
+imaginary 3*3 grid
+Target array is 3*2
+
+1*1 2*1 3*1
+1*2 2*2 3*2
+1*3 3*2 3*3
+
+when users first input was 3*1, and second input was 2*1
+display, rows and coms are getting further away.
+
+When users first input was 2*1, and second input was 3*1
+display, colums are getting closer
+
+TEST CASE
+When the grid is 5*5, and the answer row is 5 and the answer col is 5
+1st guess: row 1 col 1		test: Have a guess again
+2nd guess: row 5 col 3		test: Your guessed row is correct and column is getting close
+3rd guess: row 5 col 2		test: Your guessed row is correct and column is further away
+4th guess: row 5 col 2		test: Your guessed row is correct. But the distance to the answer column did not change from previous guess or the same guessed row from previous row.
+TEST: ALL CORRECT
+
+2nd test: answer row is 3 answer col is 3
+1st guess: row 5 col 5		output: Have a guess again
+2nd guess: row 1 col 4		output: Your guessed column is getting close. The distance to the answer row is same from the previous guessed row or it is the same guessed row from the previous one.
+3rd guess: row 5 col 1		output: Your guessed column is further away, but the distance to the answer row is same from the previous guessed row or it is the same gussed row from the previous one.
+4th guess: row 2 col 2		output: Your guessed row and column is getting close
+5th guess: row 5 col 5		output: Your guessed row and column is further away
+TEST: ALL CORRECT
+
+3rd test: answer row is 3 answer col is 3
+1st guess: row 1 col 1		output: Have a guess again
+2nd guess: row 1 col 1		output: It is the same guess from the previous one
+3rd guess: row 5 col 5		output: The distance to the answer column and the answer row hasn't change from the previous guess
+4th guess: row 5 col 4		output: Your guessed column is getting close. The distance to the answer row is same from the previous guessed row or it is the same guessed row from the previous one.
+5th guess: row 5 col 5		output: Your guessed column is further away, but the distance to the answer row is same from the previous guessed row or it is the same gussed row from the previous one.
+6th guess: row 5 col 1		output: The distance to the answer column and the answer row hasn't change from the previous guess
+6th guess: row 5 col 3		output: Your guessed column is correct. But the distance to the answer column did not change from previous guess or the same guessed column from previous column.
+TEST: ALL CORRECT
+
+Next
+1st guess: row 1 col 1		output: Have a guess again
+2nd guess: row 3 col 3		output: Correct
+3rd guess: row 6 col 2		output: YOU LOSE
+5th guess: row -4 col 4		output: YOU LOSE
+TEST: ALL CORRECT
